@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 try:
 	station = sys.argv[1]
 except IndexError:
-	print 'please choose a station: 11MONITOR_CCNY, 12MONITOR_DS, 13MONITOR_IS74, 14MONITOR_PS19, 21MONITOR_PS274, 22MONITOR_IS314, 31MONITOR_IS143, 41MONITOR_MASPETH, 51MONITOR_FKW, 61MONITOR_Average'
+	print 'please choose a station: 11MONITOR_CCNY, 12MONITOR_DS, 13MONITOR_IS74, 14MONITOR_PS19, 21MONITOR_PS274, 22MONITOR_PS314, 31MONITOR_IS143, 41MONITOR_MASPETH, 51MONITOR_FKW, 61MONITOR_Average'
 
 def readCSV(station):
 	data = read_csv('./Data/2010_ALL_STATIONS/'+ station + '2010.csv')
