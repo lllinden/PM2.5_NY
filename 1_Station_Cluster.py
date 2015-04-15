@@ -46,9 +46,13 @@ def plot(result, files, cluster):
 
 	for i in range(cluster):
 		plot_dct[i] = np.mean(np.vstack(plot_dct[i]),axis=0)
+		if i == 0:
+			axs[i].plot(plot_dct[i], color='green',lw=1.5)
+		if i == 1:
+			axs[i].plot(plot_dct[i], color='red',lw=1.5)
+		if i == 2:
+			axs[i].plot(plot_dct[i], color='blue',lw=1.5)
 
-		axs[i].plot(plot_dct[i], color='black',lw=1.5)
-		
 		axs[i].set_ylabel('pm2.5')
 		axs[i].set_xlim([0,24*7])
 
